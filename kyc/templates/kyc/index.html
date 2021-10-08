@@ -1,0 +1,263 @@
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<form action="/kyc/" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <div class="fieldWrapper">
+        {{form.FirstName.errors}}
+        <label for="First Name">First Name </label>
+        {{form.FirstName}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.MiddleName.errors}}
+        <label for="Middle Name">Middle Name </label>
+        {{form.MiddleName}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.LastName.errors}}
+        <label for="Last Name">Last Name </label>
+        {{form.LastName}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.AccountType.errors}}
+        <label for="AccountType">Account Type </label>
+        {{form.AccountType}}
+    </div>
+     <div class="fieldWrapper">
+        {{form.AccountOperation.errors}}
+        <label for="Account Operation ">Account Operation  </label>
+        {{form.AccountOperation }}
+    </div>
+    <div class="fieldWrapper">
+        {{form.Gender.errors}}
+        <label for="Gender">Gender </label>
+        {{form.Gender}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.Marital_Status.errors}}
+        <label for="Marital_Status">Marital_Status  </label>
+        {{form.Marital_Status}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.FatherName.errors}}
+        <label for="Father Name">Father's Name  </label>
+        {{form.FatherName}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.MotherName.errors}}
+        <label for="MotherName">Mother's Name  </label>
+        {{form.MotherName}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.GrandFatherName.errors}}
+        <label for="GrandFatherName">GrandFather's Name  </label>
+        {{form.GrandFatherName}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.SpouseName.errors}}
+        <label for="SpouseName ">Spouse's Name </label>
+        {{form.SpouseName }}
+    </div>
+    <div class="fieldWrapper">
+        {{form.DOB_AD.errors}}
+        <label for="DOB_AD">Date Of Birth(AD) </label>
+        {{form.DOB_AD }}
+    </div>
+    <div class="fieldWrapper">
+        {{form.DOB_BS.errors}}
+        <label for="DOB_BS">Date Of Birth(BS) </label>
+        {{form.DOB_BS}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.Occupation.errors}}
+        <label for="Occupation ">Occupation  </label>
+        {{form.Occupation }}
+    </div>
+    <div class="fieldWrapper">
+        {{form.OrganizationName.errors}}
+        <label for="OrganizationName ">Organization's Name  </label>
+        {{form.OrganizationName}}
+    </div>
+    <div>
+        <h4>Permanent Address</h4>
+
+        <div class="fieldWrapper">
+            {{form.P_Country.errors}}
+            <label for="P_Country ">Country  </label>
+            {{form.P_Country}}
+        </div>
+            <div class="fieldWrapper">
+            {{form.P_Zone.errors}}
+            <label for="P_Zone ">Zone  </label>
+            {{form.P_Zone}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_District.errors}}
+            <label for="P_District ">District  </label>
+            {{form.P_District}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_VDC.errors}}
+            <label for="P_VDC ">VDC  </label>
+            {{form.P_VDC}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_Tole.errors}}
+            <label for="P_Tole ">Tole  </label>
+            {{form.P_Tole}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_Ward.errors}}
+            <label for="P_Ward ">Ward  </label>
+            {{form.P_Ward}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_House.errors}}
+            <label for="P_House ">House  </label>
+            {{form.P_House}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_Phone.errors}}
+            <label for="P_Phone ">Phone  </label>
+            {{form.P_Phone}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_Mobile.errors}}
+            <label for="P_Mobile ">Mobile  </label>
+            {{form.P_Mobile}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_OfficePhone.errors}}
+            <label for="P_OfficePhone ">OfficePhone  </label>
+            {{form.P_OfficePhone}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.P_Email.errors}}
+            <label for="P_Email ">Email  </label>
+            {{form.P_Email}}
+        </div>
+    </div>
+     <div>
+        <h4>Temporary Address</h4>
+
+        <div class="fieldWrapper">
+            {{form.T_Country.errors}}
+            <label for="T_Country ">Country  </label>
+            {{form.T_Country}}
+        </div>
+            <div class="fieldWrapper">
+            {{form.T_Zone.errors}}
+            <label for="T_Zone ">Zone  </label>
+            {{form.T_Zone}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_District.errors}}
+            <label for="T_District ">District  </label>
+            {{form.T_District}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_VDC.errors}}
+            <label for="T_VDC ">P_VDC  </label>
+            {{form.T_VDC}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_Tole.errors}}
+            <label for="T_Tole ">Tole  </label>
+            {{form.T_Tole}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_Ward.errors}}
+            <label for="T_Ward ">Ward  </label>
+            {{form.T_Ward}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_House.errors}}
+            <label for="T_House ">House  </label>
+            {{form.T_House}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_Phone.errors}}
+            <label for="T_Phone ">Phone  </label>
+            {{form.T_Phone}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_Mobile.errors}}
+            <label for="T_Mobile ">Mobile  </label>
+            {{form.T_Mobile}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_OfficePhone.errors}}
+            <label for="T_OfficePhone ">OfficePhone  </label>
+            {{form.T_OfficePhone}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.T_Email.errors}}
+            <label for="T_Email ">Email  </label>
+            {{form.T_Email}}
+        </div>
+    </div>
+    <div>
+        <h4>For Minor</h4>
+        <div class="fieldWrapper">
+            {{form.GuardianName.errors}}
+            <label for="GuardianName ">Guardian's Name  </label>
+            {{form.GuardianName}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.GuardianRelation.errors}}
+            <label for="GuardianRelation ">Guardian's Relation  </label>
+            {{form.GuardianRelation }}
+        </div>
+        <div class="fieldWrapper">
+            {{form.GuardianAddress.errors}}
+            <label for="GuardianAddress ">Guardian's Address  </label>
+            {{form.GuardianAddress}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.GuardianTelephone.errors}}
+            <label for="GuardianTelephone ">Guardian's Telephone  </label>
+            {{form.GuardianTelephone}}
+        </div>
+    </div>
+    <div>
+        <h4>Nominee Details</h4>
+        <div class="fieldWrapper">
+            {{form.NomineeName.errors}}
+            <label for="NomineeName ">Nominee's Name  </label>
+            {{form.NomineeName}}
+        </div>
+        <div class="fieldWrapper">
+            {{form.NomineeRelation.errors}}
+            <label for="Relation ">Nominee's Relation  </label>
+            {{form.NomineeRelation }}
+        </div>
+        <div class="fieldWrapper">
+            {{form.NomineeAddress.errors}}
+            <label for="NomineeAddress ">Nominee's Address  </label>
+            {{form.NomineeAddress}}
+        </div>
+         <div class="fieldWrapper">
+            {{form.NomineeTelephone.errors}}
+            <label for="NomineeTelephone ">Nominee's Telephone  </label>
+            {{form.NomineeTelephone}}
+        </div>
+         <div class="fieldWrapper">
+            {{form.NomineeMembershipno.errors}}
+            <label for="NomineeMembershipno ">Nominee's Membership Number </label>
+            {{form.NomineeMembershipno}}
+        </div>
+    </div>
+    <div class="fieldWrapper">
+       {{form.AccountPhoto.errors}}
+       <label for="AccountPhoto ">Applicant's Photo </label>
+       {{form.AccountPhoto}}
+    </div>
+    <div class="fieldWrapper">
+       {{form.ApplicantSignature.errors}}
+       <label for="ApplicantSignature ">Applicant's Signature </label>
+       {{form.ApplicantSignature}}
+    </div>
+
+
+   <button type="submit" class="btn btn-success">Submit</button>
+</form>
